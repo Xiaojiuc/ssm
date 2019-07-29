@@ -18,9 +18,13 @@ public class TestController {
     private TestService testService;
 
 //    @ResponseBody
-    @RequestMapping("/tests")
+    @RequestMapping("/")
     public String selAll(ModelAndView modelAndView){
-
+        testService.selAll();
+        int [] ss={5,8,6,1,8,5,8,6,3,7};
+        for(int s:ss){
+            System.out.println(s);
+        }
         return  "index";
     }
 
